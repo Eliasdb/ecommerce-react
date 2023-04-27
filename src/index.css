@@ -215,3 +215,24 @@ button {
   display: flex;
   gap: 3rem;
 }
+
+@media (max-width: 1024px) {
+  .checkout-container {
+    flex-direction: column;
+  }
+
+  .form-container,
+  .items-container {
+    width: 55vw !important;
+  }
+  .form-row {
+    width: 90% !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .form-container,
+  .items-container {
+    width: 94vw !important;
+  }
+}

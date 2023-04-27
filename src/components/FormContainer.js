@@ -116,6 +116,7 @@ const FormContainer = ({ cart, totalAmount }) => {
               type="text"
               id="message"
               name="message"
+              rows={3}
               className="form-input"
               value={submission.message}
               onChange={handleChange}
@@ -139,19 +140,27 @@ const FormContainer = ({ cart, totalAmount }) => {
 };
 
 const FormWrapper = styled.div`
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
   background: var(--clr-primary-10);
-  width: 50rem;
+  width: 50vw;
   border-radius: 1rem;
-  margin-bottom: 5rem;
+  /* margin-bottom: 5rem; */
   border: 1px solid grey;
 
   body {
     overflow: hidden;
   }
 
+  input,
+  textarea {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 0.9rem;
+  }
+
   .title {
     padding-bottom: 1rem;
+
+    /* color: var(--clr-primary-1); */
   }
 
   .form {
@@ -199,25 +208,32 @@ const FormWrapper = styled.div`
     padding: 0.5rem 0.5rem;
     border-radius: var(--radius);
     width: 50%;
+    font-size: 1rem;
   }
 
   textarea,
   input:focus {
     outline-color: var(--clr-primary-4);
   }
+
+  textarea {
+    resize: none;
+  }
 `;
 
 const ItemsWrapper = styled.div`
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
   background: var(--clr-primary-10);
-  width: 23rem;
+  width: 23vw;
   border-radius: 1rem;
   padding: 2rem;
   border: 1px solid grey;
-  margin-bottom: 5rem;
+  /* margin-bottom: 5rem; */
 
   .title {
     padding-bottom: 1rem;
+
+    /* color: var(--clr-primary-1); */
   }
 
   .items {
