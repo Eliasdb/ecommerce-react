@@ -3,10 +3,11 @@ import styled from "styled-components";
 import { PageHero, StripeCheckout } from "../components";
 // extra imports
 import { useCartContext } from "../context/cart_context";
-import { Link } from "react-router-dom";
+import { Form, Link } from "react-router-dom";
+import FormContainer from "../components/FormContainer";
 
 const CheckoutPage = () => {
-  const { cart } = useCartContext();
+  const { cart, totalAmount } = useCartContext();
   return (
     <main>
       <PageHero title="checkout" />
@@ -19,7 +20,7 @@ const CheckoutPage = () => {
             </Link>
           </div>
         ) : (
-          <StripeCheckout />
+          <FormContainer cart={cart} totalAmount={totalAmount / 100} />
         )}
       </Wrapper>
     </main>
