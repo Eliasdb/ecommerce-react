@@ -25,7 +25,7 @@ const CartButtons = () => {
           <FaUserMinus
             onClick={() => {
               clearCart();
-              logout({ returnTo: window.location.origin });
+              logout({ returnTo: "https://lenderts-garage.netlify.app/" });
             }}
           />
         </button>
