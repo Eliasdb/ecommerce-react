@@ -7,6 +7,7 @@ const FormContainer = ({ cart, totalAmount }) => {
     lastName: "",
     phoneNumber: "",
     message: "",
+    email: "",
   });
 
   const handleChange = (e) => {
@@ -29,12 +30,12 @@ const FormContainer = ({ cart, totalAmount }) => {
   };
 
   return (
-    <div className="overall">
+    <div className="checkout-container">
       <ItemsWrapper className="items-container">
         <h3 className="title">Summary</h3>
-        {cart.map((item) => {
+        {cart.map((item, index) => {
           return (
-            <div className="items">
+            <div key={index} className="items">
               <p>
                 <span className="bold">{item.amount}</span>x {item.name}
               </p>
@@ -86,7 +87,7 @@ const FormContainer = ({ cart, totalAmount }) => {
               Phone
             </label>
             <input
-              type="text"
+              type="tel"
               id="phoneNumber"
               name="phoneNumber"
               className="form-input"
@@ -95,10 +96,23 @@ const FormContainer = ({ cart, totalAmount }) => {
             />
           </div>
           <div className="form-row">
+            <label htmlFor="phoneNumber" className="form-label">
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              className="form-input"
+              value={submission.email}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="form-row">
             <label htmlFor="message" className="form-label">
               Message
             </label>
-            <input
+            <textarea
               type="text"
               id="message"
               name="message"
@@ -108,7 +122,14 @@ const FormContainer = ({ cart, totalAmount }) => {
             />
           </div>
           <input type="hidden" name="cart" value={formattedCart()} />
-          <button type="submit" className="submit-btn">
+          <input
+            type="hidden"
+            name="_after"
+            value="https://lenderts-garage.netlify.app/"
+          />
+          <input type="hidden" name="_honeypot" value="" />
+
+          <button type="submit" value="Submit" className="submit-btn">
             submit
           </button>
         </form>
@@ -134,7 +155,7 @@ const FormWrapper = styled.div`
   }
 
   .form {
-    padding: 3rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,6 +167,9 @@ const FormWrapper = styled.div`
 
   .form-input {
     width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+
     padding: 0.375rem 0.75rem;
     margin-top: 0.5rem;
   }
@@ -176,15 +200,21 @@ const FormWrapper = styled.div`
     border-radius: var(--radius);
     width: 50%;
   }
+
+  textarea,
+  input:focus {
+    outline-color: var(--clr-primary-4);
+  }
 `;
 
 const ItemsWrapper = styled.div`
   margin-top: 5rem;
   background: var(--clr-primary-10);
-  width: 50rem;
+  width: 23rem;
   border-radius: 1rem;
-  padding: 3rem;
+  padding: 2rem;
   border: 1px solid grey;
+  margin-bottom: 5rem;
 
   .title {
     padding-bottom: 1rem;

@@ -12,10 +12,12 @@ import {
   PrivateRoute,
   AuthWrapper,
 } from "./pages";
+import { ScrollToTop } from "./utils/helpers";
 function App() {
   return (
     <AuthWrapper>
       <Router>
+        <ScrollToTop />
         <Navbar />
         <Sidebar />
         <Routes>

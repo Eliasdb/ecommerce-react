@@ -210,3 +210,8 @@ button {
 .page {
   min-height: calc(100vh - (20vh + 10rem));
 }
+
+.checkout-container {
+  display: flex;
+  gap: 3rem;
+}
