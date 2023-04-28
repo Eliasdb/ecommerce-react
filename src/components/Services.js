@@ -8,12 +8,13 @@ const Services = () => {
       <div className="section-center">
         <article className="header">
           <h3>
-            custom furniture <br /> built only for you
+            A vast collection of items <br /> hand-picked just for you
           </h3>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum
-            aperiam facilis ipsum rem recusandae iste enim rerum id excepturi
-            numquam?
+            Our inventory includes household appliances, electronics, fashion,
+            beauty, and health products, pet supplies, and so much more. We take
+            pride in selecting only high-quality items, so you can shop with
+            confidence knowing you are getting the best value for your money.
           </p>
         </article>
         <div className="services-center">
@@ -36,7 +37,7 @@ const Services = () => {
 const Wrapper = styled.section`
   h3,
   h4 {
-    color: var(--clr-primary-1);
+    color: var(--clr-grey-1);
   }
   padding: 5rem 0;
 

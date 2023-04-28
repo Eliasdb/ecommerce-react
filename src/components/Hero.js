@@ -1,20 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import heroBcg from "../assets/hero-bcg.jpeg";
-import heroBcg2 from "../assets/hero-bcg-2.jpeg";
+import heroBcg from "../assets/main.jpg";
+import heroBcg2 from "../assets/side.jpg";
 
 const Hero = () => {
   return (
     <Wrapper className="section-center">
       <article className="content">
         <h1>
-          design your <br /> comfort zone
+          Design your <br /> comfort zone
         </h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde iste
-          incidunt recusandae sit perferendis, quibusdam laboriosam deleniti
-          velit adipisci optio.
+          We are a one-of-a-kind online store that offers an extensive range of
+          products at incredibly affordable prices. Please take a look around.
         </p>
         <Link to="/products" className="btn hero-btn">
           shop now

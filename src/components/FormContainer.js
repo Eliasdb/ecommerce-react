@@ -67,6 +67,7 @@ const FormContainer = ({ cart, totalAmount }) => {
               className="form-input"
               value={submission.firstName}
               onChange={handleChange}
+              placeholder="First name"
             />
           </div>
           <div className="form-row">
@@ -80,6 +81,7 @@ const FormContainer = ({ cart, totalAmount }) => {
               className="form-input"
               value={submission.lastName}
               onChange={handleChange}
+              placeholder="Last name"
             />
           </div>
           <div className="form-row">
@@ -93,6 +95,7 @@ const FormContainer = ({ cart, totalAmount }) => {
               className="form-input"
               value={submission.phoneNumber}
               onChange={handleChange}
+              placeholder="0492 77 76 72"
             />
           </div>
           <div className="form-row">
@@ -106,6 +109,7 @@ const FormContainer = ({ cart, totalAmount }) => {
               className="form-input"
               value={submission.email}
               onChange={handleChange}
+              placeholder="youremail@example.com"
             />
           </div>
           <div className="form-row">
@@ -120,6 +124,7 @@ const FormContainer = ({ cart, totalAmount }) => {
               className="form-input"
               value={submission.message}
               onChange={handleChange}
+              placeholder="Provide optional message"
             />
           </div>
           <input type="hidden" name="cart" value={formattedCart()} />
@@ -180,12 +185,12 @@ const FormWrapper = styled.div`
     min-width: 100%;
 
     padding: 0.375rem 0.75rem;
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
   }
 
   .form-label {
-    margin-bottom: 0.5rem;
-    font-weight: 800;
+    margin-bottom: 0.2rem;
+    font-weight: 500;
     display: block;
   }
 
@@ -203,7 +208,7 @@ const FormWrapper = styled.div`
   }
 
   .submit-btn {
-    background: var(--clr-red-dark);
+    background: var(--clr-primary-5);
     color: var(--clr-white);
     padding: 0.5rem 0.5rem;
     border-radius: var(--radius);

@@ -14,12 +14,10 @@ const AboutPage = () => {
             <h2>Our Story</h2>
             <div className="underline"></div>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Asperiores amet atque quod harum, nostrum aliquam libero vel natus
-              molestiae similique? Commodi dolorum harum asperiores natus
-              veritatis nemo magnam, perspiciatis aut velit fuga nihil, porro
-              hic perferendis repellat quam corrupti voluptatem. Eaque quasi est
-              similique facere incidunt magnam velit minima vero.
+              Lendert has an extensive career in aesthetics. Ranging from
+              painting art to crafting entire film sets. Throughout the years he
+              amassed a great collection of a variety of items and is eager to
+              share the wealth with the broader public.
             </p>
           </div>
         </article>

@@ -2,35 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Contact = () => {
-  return (
-    <Wrapper>
-      <div className="section-center">
-        <h3>Join our newsletter and get 30% off</h3>
-        <div className="content">
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum
-            facilis provident architecto laboriosam tempore ipsam enim ea veniam
-            molestias totam.
-          </p>
-          <form
-            className="contact-form"
-            action="https://formspree.io/f/mzbqgvog"
-            method="POST"
-          >
-            <input
-              type="email"
-              className="form-input"
-              placeholder="enter email"
-              name="_replyto"
-            />
-            <button type="submit" className="submit-btn">
-              Subscribe
-            </button>
-          </form>
-        </div>
-      </div>
-    </Wrapper>
-  );
+  return <Wrapper></Wrapper>;
 };
 const Wrapper = styled.section`
   padding: 5rem 0;
@@ -93,7 +65,7 @@ const Wrapper = styled.section`
     }
   }
   @media (min-width: 1280px) {
-    padding: 15rem 0;
+    padding: 5rem 0;
   }
 `;
 

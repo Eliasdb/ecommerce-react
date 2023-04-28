@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../assets/logo.svg";
+import logo from "../assets/LG.png";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { links } from "../utils/constants";
@@ -56,6 +56,7 @@ const NavContainer = styled.nav`
     max-width: var(--max-width);
   }
   .nav-header {
+    z-index: -1;
     display: flex;
     align-items: center;
     justify-content: space-between;
