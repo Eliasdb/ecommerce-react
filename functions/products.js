@@ -24,7 +24,7 @@ exports.handler = async function () {
         shipping,
         images,
       } = fields;
-      const { url } = images[0];
+      const formattedImages = images.replace(/(\r\n|\n|\r)/gm, "").split(",");
       return {
         id,
         name,
@@ -35,7 +35,8 @@ exports.handler = async function () {
         description,
         category,
         shipping,
-        image: url,
+        image: formattedImages[0],
+        images: formattedImages,
       };
     });
 

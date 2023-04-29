@@ -17,6 +17,8 @@ exports.handler = async (event, context, cb) => {
         };
       }
       product = { id: product.id, ...product.fields };
+      product.images = product.images.replace(/(\r\n|\n|\r)/gm, "").split(",");
+
       return {
         statusCode: 200,
         body: JSON.stringify(product),
@@ -28,6 +30,7 @@ exports.handler = async (event, context, cb) => {
       };
     }
   }
+
   return {
     statusCode: 400,
     body: "Please provide product id",

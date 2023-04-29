@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../assets/LG.png";
+import logo from "../assets/LG-1.png";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { links } from "../utils/constants";
@@ -16,7 +16,7 @@ const Nav = () => {
       <div className="nav-center">
         <div className="nav-header">
           <Link to="/">
-            <img src={logo} alt="comfy sloth" />
+            <img src={logo} alt="lenderts garage" />
           </Link>
           <button type="button" className="nav-toggle" onClick={openSidebar}>
             <FaBars />
@@ -56,7 +56,6 @@ const NavContainer = styled.nav`
     max-width: var(--max-width);
   }
   .nav-header {
-    z-index: -1;
     display: flex;
     align-items: center;
     justify-content: space-between;
