@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-const ProductImages = ({ images }) => {
+const ProductImages = ({ images, name }) => {
   const [main, setMain] = useState(images?.[0]);
   return (
     <Wrapper>
@@ -11,7 +11,7 @@ const ProductImages = ({ images }) => {
           return (
             <img
               src={image}
-              alt={image}
+              alt={name}
               key={index}
               onClick={() => setMain(images[index])}
               className={`${image === main ? "active" : "null"}`}

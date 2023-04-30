@@ -19,7 +19,7 @@ const CartButtons = () => {
           <span className="cart-value">{totalItems}</span>
         </span>
       </Link>
-      {myUser ? (
+      {/* {myUser ? (
         <button type="button" className="auth-btn">
           Logout
           <FaUserMinus
@@ -33,7 +33,7 @@ const CartButtons = () => {
         <button type="button" className="auth-btn" onClick={loginWithRedirect}>
           Login <FaUserPlus />
         </button>
-      )}
+      )} */}
     </Wrapper>
   );
 };
@@ -42,7 +42,7 @@ const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  width: 225px;
+  width: 115px;
 
   .cart-btn {
     color: var(--clr-grey-1);

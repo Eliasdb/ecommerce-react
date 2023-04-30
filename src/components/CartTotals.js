@@ -13,15 +13,15 @@ const CartTotals = () => {
     <Wrapper>
       <div>
         <article>
-          <h5>
+          {/* <h5>
             subtotal :<span>{formatPrice(totalAmount)}</span>
           </h5>
           <p>
             shipping fee: <span>{formatPrice(shipping_fee)}</span>
-          </p>
-          <hr />
+          </p> */}
+          {/* <hr /> */}
           <h4>
-            order total: <span>{formatPrice(totalAmount + shipping_fee)}</span>
+            order total: <span>{formatPrice(totalAmount)}</span>
           </h4>
         </article>
         {myUser ? (
@@ -67,6 +67,10 @@ const Wrapper = styled.section`
     margin-top: 1rem;
     text-align: center;
     font-weight: 700;
+  }
+
+  h4 {
+    margin-top: 1rem;
   }
 `;
 
