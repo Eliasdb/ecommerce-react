@@ -2,14 +2,13 @@
 
 ## About
 
-An ecommerce store with login.
+An e-commerce store made for my friend to sell items he has in stock.
 
 ## Used tech
 
 - React
 - Axios
 - Airtable
-- auth0
 - Context API
 - React Router Dom
 - Netlify serverless functions
@@ -18,3 +17,5 @@ An ecommerce store with login.
 ## Script to run locally
 
 `npm i && npm run dev`
+
+## [Live](https://lenderts-garage.netlify.app/)
